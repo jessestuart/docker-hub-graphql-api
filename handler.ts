@@ -1,18 +1,18 @@
-import * as _ from 'lodash'
+import { queryReposForUser } from './src/services/docker-hub'
 
-// modern module syntax
+// import log from './src/utils/log'
+
 export const hello = async (event, context, callback) => {
-  // dependencies work as expected
-  console.log(_.VERSION)
-
-  // async/await also works out of the box
-  await new Promise((resolve, reject) => setTimeout(resolve, 500))
+  const { topRepos, totalPulls } = await queryReposForUser({
+    username: 'jessestuart',
+  })
+  // await Promise.all(topRepos.map(popuplateDynamoForRepo))
 
   const response = {
-    body: JSON.stringify({
-      input: event,
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-    }),
+    body: {
+      topRepos,
+      totalPulls,
+    },
     statusCode: 200,
   }
 
