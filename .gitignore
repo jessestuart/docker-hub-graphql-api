@@ -1,6 +1,9 @@
 node_modules/
 jspm_packages/
+junit.xml
 
 # Serverless directories
-.serverless
-.build
+.serverless/
+.build/
+.dynamodb/
+dist/
