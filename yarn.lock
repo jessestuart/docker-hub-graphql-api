@@ -1275,6 +1275,11 @@
   resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
   integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
 
+"@types/serverless@1.18.2":
+  version "1.18.2"
+  resolved "https://registry.yarnpkg.com/@types/serverless/-/serverless-1.18.2.tgz#4054abce878bc4e29896c005cb8e88563fd0e4fc"
+  integrity sha512-bBbuNQkDUYZFjmT4KB/eiFKyoNbTcnSslVpeKH+3j1C9xhIkSS1sEZtiFb0TI9TnalxauGEnZRmQ0c6uzAY2Zg==
+
 "@types/sonic-boom@*":
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/@types/sonic-boom/-/sonic-boom-0.6.2.tgz#5f6c7bf6b4a0994f9339d778da6a7adcc3d37080"
