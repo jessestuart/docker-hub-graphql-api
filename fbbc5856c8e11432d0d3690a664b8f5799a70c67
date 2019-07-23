@@ -1,0 +1,6 @@
+[ver:1,total:1620]
+.gtm/terminal.app:680,1563904800:250,1563908400:70,1563919200:360,r
+serverless.yml:440,1563904800:370,1563919200:70,m
+handler.ts:325,1563904800:80,1563908400:75,1563919200:170,m
+node_modules/@types/serverless/index.d.ts:155,1563908400:155,r
+.serverless/serverless-state.json:20,1563904800:20,r
