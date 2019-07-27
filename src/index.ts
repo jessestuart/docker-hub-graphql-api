@@ -1,15 +1,24 @@
-import _ from 'lodash'
-
-import { queryReposForUser } from './services/docker-hub'
-import { popuplateDynamoForRepo } from './services/dynamodb'
-import { DOCKER_USERNAME, DYNAMODB_TABLE_NAME } from './utils/constants'
+import { queryTopRepos } from './handlers/DockerHub'
+import { DOCKER_USERNAME } from './utils/constants'
 import log from './utils/log'
 
-if (!_.every([DOCKER_USERNAME, DYNAMODB_TABLE_NAME])) {
+if (!DOCKER_USERNAME) {
   log.fatal('Missing required parameters.')
   process.exit(1)
 }
 
-queryReposForUser({ username: DOCKER_USERNAME })
-  .then(({ topRepos }) => Promise.all(topRepos.map(popuplateDynamoForRepo)))
-  .catch(log.error)
+export const queryDockerHub = async (event, context, callback) => {
+  // @ts-ignore
+  const { topRepos, totalPulls } = await queryTopRepos(DOCKER_USERNAME)
+
+  const response = {
+    body: JSON.stringify({ topRepos, totalPulls }),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    statusCode: 200,
+  }
+
+  return callback(null, response)
+}
+// .then(({ topRepos }) => Promise.all(topRepos.map(popuplateDynamoForRepo)))

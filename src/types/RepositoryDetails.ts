@@ -1,7 +1,7 @@
 export default interface RepositoryDetails {
   description?: string
-  last_updated: string
+  lastUpdated: string
   name: string
-  pull_count: number
-  star_count: number
+  pullCount: number
+  starCount: number
 }

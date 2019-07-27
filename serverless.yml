@@ -48,7 +48,7 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
+# package:
 #  include:
 #    - include-me.js
 #    - include-me-dir/**
@@ -57,8 +57,14 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.queryDockerHubTopRepos
+  queryDockerHubTopRepos:
+    handler: src/index.queryDockerHub
+    memorySize: 128
+    events:
+      - http:
+          path: users/topRepos
+          method: get
+          cors: true
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -100,7 +106,7 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-#resources:
+# resources:
 #  Resources:
 #    NewResource:
 #      Type: AWS::S3::Bucket
@@ -112,9 +118,10 @@ functions:
 #       Value: "Some output value"
 
 plugins:
-  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
   - serverless-dynamodb-local
   - serverless-offline
+  - serverless-plugin-typescript
 
 custom:
   dynamodb:
