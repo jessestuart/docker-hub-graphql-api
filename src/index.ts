@@ -15,6 +15,7 @@ export const queryDockerHub = async (event, context, callback) => {
     body: JSON.stringify({ topRepos, totalPulls }),
     headers: {
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
     },
     statusCode: 200,
   }
