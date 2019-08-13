@@ -1,3 +1,4 @@
+import { APIGatewayProxyHandler } from 'aws-lambda'
 import { queryTopRepos } from './handlers/DockerHub'
 import { DOCKER_USERNAME } from './utils/constants'
 import log from './utils/log'
@@ -5,6 +6,21 @@ import log from './utils/log'
 if (!DOCKER_USERNAME) {
   log.fatal('Missing required parameters.')
   process.exit(1)
+}
+
+export const hello: APIGatewayProxyHandler = async (event, _context) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        message:
+          'Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!',
+        input: event,
+      },
+      null,
+      2,
+    ),
+  }
 }
 
 export const queryDockerHub = async (event, context, callback) => {
@@ -22,4 +38,3 @@ export const queryDockerHub = async (event, context, callback) => {
 
   return callback(null, response)
 }
-// .then(({ topRepos }) => Promise.all(topRepos.map(popuplateDynamoForRepo)))
