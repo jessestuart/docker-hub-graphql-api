@@ -18,7 +18,7 @@ const QUERY_PARAMS = Object.freeze({
 })
 
 // @ts-ignore
-const extractRepositoryDetails: (
+export const extractRepositoryDetails: (
   repos: unknown,
 ) => RepositoryDetails[] = _.flow(
   fp.get('data.results'),

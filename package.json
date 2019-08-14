@@ -16,11 +16,13 @@
   },
   "devDependencies": {
     "@semantic-release/git": "7.0.16",
+    "@testing-library/jest-dom": "4.0.0",
     "@types/aws-lambda": "8.10.31",
     "@types/dotenv": "6.1.1",
     "@types/jest": "24.0.17",
     "@types/lodash": "4.14.136",
     "@types/luxon": "1.15.2",
+    "@types/nanoid": "2.0.0",
     "@types/node": "12.7.1",
     "@types/pino": "5.8.8",
     "@types/serverless": "1.18.2",
@@ -35,6 +37,7 @@
     "jest": "24.8.0",
     "jest-junit": "7.0.0",
     "mocha": "6.2.0",
+    "nanoid": "2.0.3",
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
     "prettier-eslint": "9.0.0",
@@ -45,6 +48,9 @@
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-config-standard": "8.0.1"
+  },
+  "scripts": {
+    "test": "jest"
   },
   "license": "MIT",
   "main": "handler.js"
