@@ -1,0 +1,11 @@
+[ver:1,total:1980]
+src/handlers/DockerHub.spec.ts:1281,1565794800:1281,m
+test/fixtures/DockerHubReposFixture.ts:206,1565794800:206,m
+jest.config.js:132,1565794800:132,m
+.gtm/terminal.app:128,1565794800:128,r
+package.json:92,1565794800:92,m
+src/handlers/DockerHub.ts:71,1565794800:71,m
+test/setupTests.ts:30,1565794800:30,m
+node_modules/@types/lodash/ts3.1/common/function.d.ts:20,1565794800:20,r
+.gitignore:10,1565794800:10,m
+.prettierrc.js:10,1565794800:10,r
