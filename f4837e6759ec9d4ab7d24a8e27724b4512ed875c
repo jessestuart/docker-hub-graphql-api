@@ -1,0 +1,5 @@
+[ver:1,total:360]
+src/handlers/DockerHub.ts:285,1565794800:285,m
+.gtm/terminal.app:45,1565794800:45,r
+src/types/RepositoryDetails.ts:15,1565794800:15,r
+src/utils/log.ts:15,1565794800:15,r
