@@ -24,7 +24,7 @@ export const hello: APIGatewayProxyHandler = async (event, _context) => {
 }
 
 export const queryDockerHub: APIGatewayProxyHandler = async (
-  event: unknown,
+  _event: unknown,
   _context: unknown,
 ) => {
   if (!DOCKER_USERNAME) {
@@ -35,7 +35,7 @@ export const queryDockerHub: APIGatewayProxyHandler = async (
   const topRepos = await queryTopRepos(DOCKER_USERNAME!)
 
   const response = {
-    body: JSON.stringify({ message: { topRepos }, input: event }),
+    body: JSON.stringify(topRepos),
     headers: {
       'Access-Control-Allow-Credentials': true,
       'Access-Control-Allow-Origin': '*',

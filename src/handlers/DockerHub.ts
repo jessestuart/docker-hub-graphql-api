@@ -5,7 +5,7 @@ import fp from 'lodash/fp'
 import RepositoryDetails from '../types/RepositoryDetails'
 
 // Arbitrarily chosen # of repos to query.
-const NUM_REPOS_TO_ANALYZE = 20
+const NUM_REPOS_TO_ANALYZE = 30
 const QUERY_PARAMS = Object.freeze({
   headers: {
     'Access-Control-Allow-Credentials': true,
