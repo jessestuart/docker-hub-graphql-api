@@ -17,11 +17,6 @@ const QUERY_PARAMS = Object.freeze({
   },
 })
 
-export interface DHStatsReponse {
-  topRepos: RepositoryDetails[]
-  totalPulls: number
-}
-
 // @ts-ignore
 const extractRepositoryDetails: (
   repos: unknown,
@@ -39,13 +34,13 @@ const extractRepositoryDetails: (
   fp.map(fp.mapKeys(fp.camelCase)),
 )
 
-export const queryTopRepos = async (username: string) => {
+export const queryTopRepos = async (
+  username: string,
+): Promise<RepositoryDetails[]> => {
   const repos = await axios.get(
     `https://hub.docker.com/v2/repositories/${username}`,
     QUERY_PARAMS,
   )
-  const topRepos: RepositoryDetails[] = extractRepositoryDetails(repos)
-  const totalPulls: number = _.sumBy(topRepos, 'pullCount')
 
-  return { topRepos, totalPulls }
+  return extractRepositoryDetails(repos)
 }
