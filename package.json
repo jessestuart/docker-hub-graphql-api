@@ -4,15 +4,11 @@
   "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
     "apollo-server": "2.8.1",
-    "apollo-server-micro": "2.8.1",
     "axios": "0.19.0",
     "dotenv": "8.0.0",
     "graphql": "14.4.2",
     "lodash": "4.17.15",
     "pino": "5.13.2",
-    "serverless-dotenv-plugin": "2.1.1",
-    "serverless-offline": "5.10.1",
-    "serverless-plugin-typescript": "1.1.9",
     "typescript": "3.5.3"
   },
   "devDependencies": {
@@ -55,5 +51,5 @@
     "test": "jest"
   },
   "license": "MIT",
-  "main": "src/index.ts"
+  "main": "api/index.ts"
 }
