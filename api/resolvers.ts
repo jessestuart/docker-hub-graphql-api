@@ -101,12 +101,12 @@ export const fetchManifestList = async ({
 
 const resolvers = {
   Query: {
-    getTopRepos: async (_root: unknown, args: { username: string }) => {
+    allDockerHubRepo: async (_root: unknown, args: { username: string }) => {
       const { username } = args
       const topRepos = await queryTopRepos(username)
       return {
-        node: {
-          edges: topRepos,
+        edges: {
+          node: topRepos,
         },
       }
     },

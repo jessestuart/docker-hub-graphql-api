@@ -1,14 +1,14 @@
 export const schema = `
   type Query {
-    getTopRepos(username: String!): GatsbyNode!
+    allDockerHubRepo(username: String!): GatsbyEdges!
   }
 
   type GatsbyNode {
-    node: GatsbyEdges!
+    node: [DockerHubRepo!]!
   }
 
   type GatsbyEdges {
-    edges: [DockerHubRepo!]!
+    edges: GatsbyNode!
   }
 
   type DockerHubRepo {
@@ -22,8 +22,8 @@ export const schema = `
 
   enum Architecture {
     amd64
-    arm64
     arm
+    arm64
   }
 `
 
