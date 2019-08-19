@@ -3,20 +3,19 @@
   "version": "0.0.1",
   "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
-    "aws-lambda": "0.1.2",
+    "apollo-server": "2.8.1",
     "axios": "0.19.0",
     "dotenv": "8.0.0",
     "lodash": "4.17.15",
     "pino": "5.13.2",
     "serverless-dotenv-plugin": "2.1.1",
-    "serverless-dynamodb-local": "0.2.38",
     "serverless-offline": "5.10.1",
     "serverless-plugin-typescript": "1.1.9",
     "typescript": "3.5.3"
   },
   "devDependencies": {
+    "@now/node": "0.12.6",
     "@semantic-release/git": "7.0.16",
-    "@testing-library/jest-dom": "4.0.0",
     "@types/aws-lambda": "8.10.31",
     "@types/dotenv": "6.1.1",
     "@types/jest": "24.0.17",
@@ -50,8 +49,10 @@
     "tslint-config-standard": "8.0.1"
   },
   "scripts": {
+    "build": "babel --extensions '.ts' src/ --out-dir dist/",
+    "start": "node src/index.ts",
     "test": "jest"
   },
   "license": "MIT",
-  "main": "handler.js"
+  "main": "dist/index.js"
 }

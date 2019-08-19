@@ -3,6 +3,7 @@ jspm_packages/
 junit.xml
 
 # Serverless directories
-.serverless
-.build
-.dynamodb
+.serverless/
+.build/
+.dynamodb/
+dist/
