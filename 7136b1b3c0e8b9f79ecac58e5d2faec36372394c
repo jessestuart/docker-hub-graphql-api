@@ -1,0 +1,15 @@
+[ver:1,total:2760]
+.gtm/terminal.app:1794,1565794800:240,1565798400:60,1565834400:420,1566187200:660,1566190800:414,r
+tsconfig.json:245,1566190800:245,m
+src/types/RepositoryDetails.ts:210,1565834400:210,r
+package.json:202,1566187200:140,1566190800:62,m
+src/handlers/DockerHub.ts:90,1565834400:90,r
+src/index.ts:42,1566190800:42,r
+api/index.ts:35,1566187200:35,d
+serverless.yml:30,1566190800:30,m
+.gitignore:30,1566187200:30,m
+dist/src/index.js:20,1566190800:20,r
+api/handlers/DockerHub.ts:20,1566187200:20,d
+babel.config.js:15,1566187200:15,d
+test/setupTests.ts:15,1566190800:15,d
+dist/index.js:12,1566190800:12,d
