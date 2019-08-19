@@ -99,7 +99,7 @@ export const fetchManifestList = async ({
   return architectures
 }
 
-export const resolvers = {
+const resolvers = {
   Query: {
     getTopRepos: async (_root: unknown, args: { username: string }) => {
       const { username } = args
@@ -112,3 +112,5 @@ export const resolvers = {
     },
   },
 }
+
+export default resolvers

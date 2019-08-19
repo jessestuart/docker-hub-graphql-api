@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server'
 
-import { resolvers } from './resolvers'
+import resolvers from './resolvers'
 import typeDefs from './schema'
 
 const server = new ApolloServer({
@@ -10,6 +10,9 @@ const server = new ApolloServer({
   typeDefs,
 })
 
-server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`)
-})
+server
+  .listen()
+  .then(({ url }) => {
+    console.log(`🚀 Server ready at ${url}`)
+  })
+  .catch(console.error)
