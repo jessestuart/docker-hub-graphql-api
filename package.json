@@ -4,8 +4,10 @@
   "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
     "apollo-server": "2.8.1",
+    "apollo-server-micro": "2.8.1",
     "axios": "0.19.0",
     "dotenv": "8.0.0",
+    "graphql": "14.4.2",
     "lodash": "4.17.15",
     "pino": "5.13.2",
     "serverless-dotenv-plugin": "2.1.1",
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "@now/node": "0.12.6",
+    "@now/static-build": "0.9.7",
     "@semantic-release/git": "7.0.16",
     "@types/aws-lambda": "8.10.31",
     "@types/dotenv": "6.1.1",
@@ -49,10 +52,8 @@
     "tslint-config-standard": "8.0.1"
   },
   "scripts": {
-    "build": "babel --extensions '.ts' src/ --out-dir dist/",
-    "start": "node src/index.ts",
     "test": "jest"
   },
   "license": "MIT",
-  "main": "dist/index.js"
+  "main": "src/index.ts"
 }
