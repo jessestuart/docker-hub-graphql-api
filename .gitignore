@@ -1,9 +1,5 @@
 node_modules/
-jspm_packages/
 junit.xml
 
-# Serverless directories
-.serverless/
-.build/
-.dynamodb/
+.eslintcache
 dist/

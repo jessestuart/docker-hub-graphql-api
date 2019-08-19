@@ -4,7 +4,6 @@ module.exports = {
   coverageDirectory: './test/coverage',
   moduleFileExtensions: ['js', 'ts'],
   moduleDirectories: ['src', 'static', 'node_modules'],
-  setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
   reporters: ['default', 'jest-junit'],
   transform: {
     '^.+\\.js$': 'babel-jest',
