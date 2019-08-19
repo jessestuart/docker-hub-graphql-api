@@ -1,0 +1,10 @@
+[ver:1,total:2520]
+.gtm/terminal.app:1420,1566194400:180,1566198000:1140,1566201600:100,r
+api/index.ts:489,1566198000:279,1566201600:210,m
+node_modules/apollo-server/src/index.ts:251,1566198000:251,r
+.env:140,1566198000:140,r
+tagbardebug.log:90,1566198000:90,d
+api/resolvers.ts:50,1566201600:50,m
+package.json:35,1566198000:35,m
+api/handlers/DockerHub.spec.ts:30,1566198000:30,r
+tags:15,1566198000:15,d
