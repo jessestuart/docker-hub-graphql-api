@@ -1,26 +1,28 @@
 {
-  "name": "sls-docker-hub-tracker",
+  "name": "docker-hub-graphql-api",
   "version": "0.0.1",
   "author": "Jesse Stuart <hi@jessestuart.com>",
+  "description": "A lightweight GraphQL API for querying stats from Docker Hub.",
   "dependencies": {
     "apollo-server": "2.8.1",
     "axios": "0.19.0",
     "graphql": "14.4.2",
+    "graphql-tag": "2.10.1",
     "lodash": "4.17.15",
     "pino": "5.13.2",
     "typescript": "3.5.3"
   },
   "devDependencies": {
-    "@now/node": "0.12.6",
+    "@now/node": "0.12.7",
     "@types/dotenv": "6.1.1",
     "@types/jest": "24.0.17",
     "@types/lodash": "4.14.137",
     "@types/luxon": "1.15.2",
-    "@types/nanoid": "2.0.0",
     "@types/node": "12.7.2",
     "@types/pino": "5.8.9",
     "@typescript-eslint/eslint-plugin": "2.0.0",
     "@typescript-eslint/parser": "2.0.0",
+    "concurrently": "4.1.2",
     "eslint": "6.2.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-graphql": "3.0.3",
@@ -30,20 +32,22 @@
     "eslint-plugin-promise": "4.2.1",
     "jest": "24.9.0",
     "jest-junit": "7.0.0",
-    "mocha": "6.2.0",
-    "nanoid": "2.0.3",
+    "now": "16.1.2",
     "prettier": "1.18.2",
     "prettier-eslint": "9.0.0",
     "prettier-tslint": "0.4.2",
     "ts-jest": "24.0.2",
     "tslint": "5.18.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-config-standard": "8.0.1"
-  },
-  "scripts": {
-    "lint": "eslint --cache --quiet --ext .ts api/",
-    "test": "jest"
+    "tslint-config-prettier": "1.18.0"
   },
   "license": "MIT",
-  "main": "api/index.ts"
+  "main": "api/index.ts",
+  "scripts": {
+    "check-types": "tsc -p tsconfig.json",
+    "lint": "eslint --cache --ext .ts api/",
+    "release": "yarn build && semantic-release",
+    "test": "concurrently 'yarn check-types' 'yarn jest --coverage'",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch"
+  }
 }

@@ -2,18 +2,9 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-export const {
-  AWS_ACCESS_KEY_ID,
-  AWS_REGION,
-  AWS_SECRET_ACCESS_KEY,
-  DOCKER_USERNAME,
-  DYNAMODB_TABLE_NAME,
-} = process.env
+export const { DOCKER_USERNAME } = process.env
 
 export const Constants = {
-  AWS_ACCESS_KEY_ID,
-  AWS_REGION,
-  AWS_SECRET_ACCESS_KEY,
   DOCKER_USERNAME,
-  DYNAMODB_TABLE_NAME,
+  DOCKER_HUB_API_ROOT: 'https://hub.docker.com/v2/',
 }

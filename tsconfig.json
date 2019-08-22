@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    /* "emitDeclarationOnly": true, */
     "esModuleInterop": true,
-    "lib": ["es2015"],
+    "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "dist/",
+    "noImplicitAny": false,
+    "noEmit": true,
+    "outDir": "api/@types",
     "preserveConstEnums": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "esnext"
-  }
+    /* "target": "esnext", */
+    "typeRoots": ["node_modules/@types", "api/@types"]
+  },
+  "files": ["api/@types/global.d.ts"],
+  "include": ["api/**/*"]
 }

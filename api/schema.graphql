@@ -1,0 +1,23 @@
+type Query {
+  repos(username: String!): [DockerHubRepo!]
+}
+
+type DockerHubRepo {
+  manifests: DockerManifest
+  username: String!
+  description: String
+  lastUpdated: String!
+  name: String!
+  pullCount: Int!
+  starCount: Int!
+}
+
+type DockerManifest {
+  architectures: [Architecture!]
+}
+
+enum Architecture {
+  amd64
+  arm
+  arm64
+}

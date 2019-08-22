@@ -3,3 +3,5 @@ junit.xml
 
 .eslintcache
 dist/
+.gtm/
+test/coverage/

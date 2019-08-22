@@ -1,23 +1,22 @@
-export const schema = `
+import gql from 'graphql-tag'
+
+export const schema = gql`
   type Query {
-    allDockerHubRepo(username: String!): GatsbyEdges!
-  }
-
-  type GatsbyNode {
-    node: [DockerHubRepo!]!
-  }
-
-  type GatsbyEdges {
-    edges: GatsbyNode!
+    repos(username: String!): [DockerHubRepo!]
   }
 
   type DockerHubRepo {
-    architectures: [Architecture!]
+    manifest: DockerManifest
+    username: String!
     description: String
     lastUpdated: String!
     name: String!
     pullCount: Int!
     starCount: Int!
+  }
+
+  type DockerManifest {
+    architectures: [Architecture!]
   }
 
   enum Architecture {

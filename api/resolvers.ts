@@ -2,17 +2,13 @@ import axios from 'axios'
 import _ from 'lodash'
 import fp from 'lodash/fp'
 
-import RepositoryDetails from './types/RepositoryDetails'
+import RepositoryDetails from './models/RepositoryDetails'
 
 const DH_API_ROOT = 'https://hub.docker.com/v2/repositories/'
 
 // Arbitrarily chosen # of repos to query.
 const NUM_REPOS_TO_ANALYZE = 30
 const QUERY_PARAMS = Object.freeze({
-  headers: {
-    'Access-Control-Allow-Credentials': true,
-    'Access-Control-Allow-Origin': '*',
-  },
   params: {
     page: 1,
     page_size: NUM_REPOS_TO_ANALYZE,
@@ -59,31 +55,20 @@ export const queryTopRepos = async (
   const repoDetails = extractRepositoryDetails(repos)
   return Promise.all(
     repoDetails.map(async repo => {
-      const architectures = await fetchManifestList({
-        repo: repo.name,
-        username,
-      })
       return {
         ...repo,
-        architectures,
+        username,
       }
     }),
   )
 }
 
-interface FetchManifestListOptions {
-  repo: string
-  username: string
-}
-
-export const fetchManifestList = async ({
-  repo,
-  username,
-}: FetchManifestListOptions) => {
+export const fetchManifestList = async (repo): Promise<any> => {
+  const { name, username } = repo
   // Docker Hub requires a unique token for each repo manifest queried.
-  const token = await fetchDockerHubToken({ repo, username })
+  const token = await fetchDockerHubToken({ repo: name, username })
 
-  const manifestListURL = createManifestListURL({ repo, username })
+  const manifestListURL = createManifestListURL({ repo: name, username })
   const manifestList = await axios.get(manifestListURL, {
     headers: {
       Accept: 'application/vnd.docker.distribution.manifest.list.v2+json',
@@ -91,24 +76,25 @@ export const fetchManifestList = async ({
     },
   })
 
-  const architectures: string[] = _.flow(
+  const architectures = _.flow(
     fp.get('data.manifests'),
     fp.map('platform.architecture'),
   )(manifestList)
 
-  return architectures
+  return { architectures }
 }
 
 const resolvers = {
+  // tslint:disable
   Query: {
-    allDockerHubRepo: async (_root: unknown, args: { username: string }) => {
+    repos: async (_: unknown, args: { username: string }) => {
       const { username } = args
-      const topRepos = await queryTopRepos(username)
-      return {
-        edges: {
-          node: topRepos,
-        },
-      }
+      return await queryTopRepos(username)
+    },
+  },
+  DockerHubRepo: {
+    manifest: async (repo: any) => {
+      return await fetchManifestList(repo)
     },
   },
 }

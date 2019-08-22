@@ -2,21 +2,17 @@ import axios from 'axios'
 import _ from 'lodash'
 import fp from 'lodash/fp'
 
-import RepositoryDetails from '../types/RepositoryDetails'
+import RepositoryDetails from '../models/RepositoryDetails'
 
-// Arbitrarily chosen # of repos to query.
+// NOTE: Arbitrarily chosen # of repos to query. This should be
+//       parameterized and allow pagination.
 const NUM_REPOS_TO_ANALYZE = 30
-const QUERY_PARAMS = Object.freeze({
-  headers: {
-    'Access-Control-Allow-Credentials': true,
-    'Access-Control-Allow-Origin': '*',
-  },
-  params: {
-    page: 1,
-    page_size: NUM_REPOS_TO_ANALYZE,
-  },
-})
 
+/**
+ * Pure function that massages the Docker Hub API response into the
+ * format we want to return. e.g., only extracting certain fields;
+ * converting snake_case to camelCase, etc.
+ */
 // @ts-ignore
 export const extractRepositoryDetails: (
   repos: unknown,
@@ -39,7 +35,7 @@ export const queryTopRepos = async (
 ): Promise<RepositoryDetails[]> => {
   const repos = await axios.get(
     `https://hub.docker.com/v2/repositories/${username}`,
-    QUERY_PARAMS,
+    { params: { page: 1, page_size: NUM_REPOS_TO_ANALYZE } },
   )
 
   return extractRepositoryDetails(repos)

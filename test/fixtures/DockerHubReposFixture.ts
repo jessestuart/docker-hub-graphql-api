@@ -1,5 +1,3 @@
-import nanoid from 'nanoid'
-
 const DockerHubReposJSON = [
   {
     description: 'OwnTracks. Multiarch. 👌',
@@ -229,10 +227,9 @@ const DockerHubReposJSON = [
 // (e.g., it won't get filtered out in the RepoList component).
 const now = new Date()
 
-const DockerHubReposFixture = DockerHubReposJSON.map(fixture => ({
+const DockerHubReposFixture = DockerHubReposJSON.map((fixture, index) => ({
   ...fixture,
-  id: nanoid(),
   lastUpdated: now,
 }))
 
-export default { data: { results: DockerHubReposJSON } }
+export default { data: { results: DockerHubReposFixture } }

@@ -13,13 +13,7 @@ module.exports = {
     jest: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'prettier'],
-  parserOptions: {
-    ecmaVersion: 8,
-    sourceType: 'module',
-    project: './tsconfig.json',
-    tsconfigRootDir: './',
-  },
+  plugins: ['@typescript-eslint', 'graphql', 'import', 'prettier', 'promise'],
   rules: {
     'no-console': 'warn',
     'prettier/prettier': 'error',
