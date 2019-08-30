@@ -1,4 +1,7 @@
 {
   "name": "docker-hub-graphql-api",
-  "version": 2
+  "version": 2,
+  "env": {
+    "APOLLO_API_KEY": "@apollo_api_key"
+  }
 }
