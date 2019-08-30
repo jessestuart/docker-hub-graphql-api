@@ -6,17 +6,38 @@ export const schema = gql`
   }
 
   type DockerHubRepo {
-    manifest: DockerManifest
     username: String!
     description: String
     lastUpdated: String!
     name: String!
     pullCount: Int!
     starCount: Int!
+    canEdit: Boolean!
+    isAutomated: Boolean!
+    isMigrated: Boolean!
+    isPrivate: Boolean!
+    namespace: String!
+    repositoryType: String!
+    status: Int!
+    manifestList: DockerManifestList
+  }
+
+  type DockerManifestList {
+    manifests: [DockerManifest!]
+    mediaType: String
+    schemaVersion: Int!
   }
 
   type DockerManifest {
-    architectures: [Architecture!]
+    digest: String!
+    mediaType: String!
+    platform: Platform!
+    schemaVersion: Int
+  }
+
+  type Platform {
+    os: String!
+    architecture: Architecture!
   }
 
   enum Architecture {
