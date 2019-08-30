@@ -16,4 +16,4 @@ server
   .then(({ url }) => {
     log.debug(`🚀 Server ready at ${url}`)
   })
-  .catch(console.error)
+  .catch(log.error)
