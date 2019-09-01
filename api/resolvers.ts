@@ -5,7 +5,7 @@ import {
   queryTopRepos,
 } from 'docker-hub-utils'
 
-const DockerHubRepo = {
+const DockerHubRepoResolver = {
   manifestList: async (
     repo: DockerHubRepo,
   ): Promise<DockerManifestList | undefined> => {
@@ -14,13 +14,16 @@ const DockerHubRepo = {
 }
 
 const Query = {
-  repos: async (_, query: { username: string }): Promise<DockerHubRepo[]> => {
+  repos: async (
+    _: unknown,
+    query: { username: string },
+  ): Promise<DockerHubRepo[]> => {
     const { username } = query
     return await queryTopRepos(username)
   },
 }
 
 export default {
-  DockerHubRepo,
+  DockerHubRepoResolver,
   Query,
 }
