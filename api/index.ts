@@ -17,3 +17,5 @@ server
     log.debug(`🚀 Server ready at ${url}`)
   })
   .catch(log.error)
+
+export default server

@@ -25,10 +25,11 @@ module.exports = {
       'error',
       { multiline: { delimiter: 'none' } },
     ],
+    '@typescript-eslint/ban-ts-ignore': ['warn'],
+    '@typescript-eslint/no-explicit-any': ['off'],
     '@typescript-eslint/no-non-null-assertion': ['off'],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-use-before-define': ['off'],
     '@typescript-eslint/no-var-requires': ['off'],
-    '@typescript-eslint/no-explicit-any': ['off'],
-    '@typescript-eslint/ban-ts-ignore': ['off'],
   },
 }
