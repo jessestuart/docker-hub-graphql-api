@@ -36,8 +36,19 @@
     "tslint": "5.19.0",
     "tslint-config-prettier": "1.18.0"
   },
+  "keywords": [
+    "docker",
+    "docker-hub",
+    "graphql",
+    "apollo-server",
+    "typescript"
+  ],
   "license": "MIT",
   "main": "api/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessestuart/docker-hub-graphql-api"
+  },
   "scripts": {
     "check-types": "tsc -p tsconfig.json",
     "lint": "concurrently 'yarn lint:eslint' 'yarn lint:tslint' 'yarn check-types'",
