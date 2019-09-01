@@ -9,26 +9,21 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   env: {
     es6: true,
-    jasmine: true,
-    jest: true,
     node: true,
   },
   plugins: ['@typescript-eslint', 'graphql', 'import', 'prettier', 'promise'],
   rules: {
-    'no-console': 'warn',
-    'prettier/prettier': 'error',
-    'promise/always-return': 'off',
-    '@typescript-eslint/camelcase': ['off'],
-    '@typescript-eslint/explicit-function-return-type': ['off'],
-    '@typescript-eslint/indent': ['error', 2],
-    '@typescript-eslint/member-delimiter-style': [
+    'prettier/prettier': [
       'error',
-      { multiline: { delimiter: 'none' } },
+      {
+        parser: 'typescript',
+        printWidth: 80,
+        semi: false,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'all',
+      },
     ],
-    '@typescript-eslint/no-non-null-assertion': ['off'],
-    '@typescript-eslint/no-use-before-define': ['off'],
-    '@typescript-eslint/no-var-requires': ['off'],
-    '@typescript-eslint/no-explicit-any': ['off'],
-    '@typescript-eslint/ban-ts-ignore': ['off'],
+    '@typescript-eslint/explicit-function-return-type': ['off'],
   },
 }

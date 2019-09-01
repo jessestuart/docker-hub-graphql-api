@@ -14,6 +14,8 @@ const server = new ApolloServer({
 server
   .listen()
   .then(({ url }) => {
-    log.debug(`🚀 Server ready at ${url}`)
+    return log.debug(`🚀 Server ready at ${url}`)
   })
   .catch(log.error)
+
+export default server

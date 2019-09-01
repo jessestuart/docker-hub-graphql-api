@@ -1,26 +1,26 @@
 import {
   DockerHubRepo,
+  DockerManifestList,
   fetchManifestList,
   queryTopRepos,
 } from 'docker-hub-utils'
-import _ from 'lodash'
 
-const resolvers = {
-  // tslint:disable
-  Query: {
-    repos: async (
-      _: unknown,
-      args: { username: string },
-    ): Promise<DockerHubRepo[]> => {
-      const { username } = args
-      return await queryTopRepos(username)
-    },
-  },
-  DockerHubRepo: {
-    manifestList: async (repo: DockerHubRepo) => {
-      return await fetchManifestList(repo)
-    },
+const DockerHubRepo = {
+  manifestList: async (
+    repo: DockerHubRepo,
+  ): Promise<DockerManifestList | undefined> => {
+    return await fetchManifestList(repo)
   },
 }
 
-export default resolvers
+const Query = {
+  repos: async (_, query: { username: string }): Promise<DockerHubRepo[]> => {
+    const { username } = query
+    return await queryTopRepos(username)
+  },
+}
+
+export default {
+  DockerHubRepo,
+  Query,
+}
