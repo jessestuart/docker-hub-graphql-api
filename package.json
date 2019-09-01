@@ -5,19 +5,16 @@
   "description": "A lightweight GraphQL API for querying stats from Docker Hub.",
   "dependencies": {
     "apollo-server": "2.9.2",
-    "axios": "0.19.0",
     "docker-hub-utils": "1.2.2",
     "graphql": "14.5.4",
     "graphql-tag": "2.10.1",
-    "graphql-tools": "4.0.5",
-    "lodash": "4.17.15",
     "pino": "5.13.2",
     "typescript": "3.6.2"
   },
   "devDependencies": {
     "@now/node": "0.12.7",
+    "@semantic-release/git": "7.0.16",
     "@types/dotenv": "6.1.1",
-    "@types/lodash": "4.14.138",
     "@types/luxon": "1.15.2",
     "@types/node": "12.7.3",
     "@types/pino": "5.8.10",
@@ -35,6 +32,7 @@
     "prettier": "1.18.2",
     "prettier-eslint": "9.0.0",
     "prettier-tslint": "0.4.2",
+    "semantic-release": "15.13.24",
     "tslint": "5.19.0",
     "tslint-config-prettier": "1.18.0"
   },
@@ -44,7 +42,6 @@
     "check-types": "tsc -p tsconfig.json",
     "lint": "concurrently 'yarn lint:eslint' 'yarn lint:tslint' 'yarn check-types'",
     "lint:eslint": "eslint --cache --ext .ts api",
-    "lint:tslint": "tslint -p tsconfig.json",
-    "release": "yarn build && semantic-release"
+    "lint:tslint": "tslint -p tsconfig.json"
   }
 }
