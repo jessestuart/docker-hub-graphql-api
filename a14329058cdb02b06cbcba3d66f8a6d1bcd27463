@@ -1,0 +1,9 @@
+[ver:1,total:1500]
+.gtm/terminal.app:1204,1567317600:420,1567321200:180,1567324800:604,r
+.eslintrc.js:146,1567324800:146,m
+release.config.js:30,1567324800:30,d
+.prettierrc.js:30,1567324800:30,d
+package.json:30,1567324800:30,m
+api/index.ts:20,1567324800:20,m
+jest.config.js:20,1567324800:20,d
+release.config.ts:20,1567324800:20,m
