@@ -24,6 +24,6 @@ const Query = {
 }
 
 export default {
-  DockerHubRepoResolver,
+  DockerHubRepo: DockerHubRepoResolver,
   Query,
 }
