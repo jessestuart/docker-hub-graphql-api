@@ -23,7 +23,7 @@
     "apollo-server-testing": "2.9.3",
     "concurrently": "4.1.2",
     "eslint": "6.3.0",
-    "eslint-config-prettier": "6.1.0",
+    "eslint-config-prettier": "6.2.0",
     "eslint-plugin-graphql": "3.0.3",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-node": "9.2.0",
