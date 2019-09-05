@@ -1,0 +1,46 @@
+type DockerHubRepo {
+  username: String!
+  description: String
+  lastUpdated: DateTime!
+  name: String!
+  pullCount: Int!
+  starCount: Int!
+  canEdit: Boolean!
+  isAutomated: Boolean!
+  isMigrated: Boolean!
+  isPrivate: Boolean!
+  namespace: String!
+  repositoryType: String!
+  status: Int!
+  manifestList: DockerManifestList
+}
+
+type DockerManifestList {
+  manifests: [DockerManifest!]
+  mediaType: String
+  schemaVersion: Int!
+}
+
+type DockerManifest {
+  digest: String!
+  mediaType: String!
+  platform: Platform!
+  schemaVersion: Int
+}
+
+type Platform {
+  os: String!
+  architecture: Architecture!
+}
+
+enum Architecture {
+  amd64
+  arm
+  arm64
+}
+
+type Query {
+  repos(username: String!, lastUpdatedSinceTimestamp: Int): [DockerHubRepo!]
+}
+
+scalar DateTime

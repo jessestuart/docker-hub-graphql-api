@@ -4,6 +4,7 @@ import {
   fetchManifestList,
   queryTopRepos,
 } from 'docker-hub-utils'
+import DateTimeType from './scalars/DateTime'
 
 const DockerHubRepoResolver = {
   manifestList: async (
@@ -16,7 +17,7 @@ const DockerHubRepoResolver = {
 const Query = {
   repos: async (
     _: unknown,
-    query: { username: string },
+    query: { username: string; lastUpdatedSince?: string | number },
   ): Promise<DockerHubRepo[]> => {
     const { username } = query
     return await queryTopRepos(username)
@@ -24,6 +25,7 @@ const Query = {
 }
 
 export default {
+  DateTime: DateTimeType,
   DockerHubRepo: DockerHubRepoResolver,
   Query,
 }
