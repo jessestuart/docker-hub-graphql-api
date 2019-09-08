@@ -5,8 +5,8 @@ import { DateTime } from 'luxon'
 const coerceDateTimeValue = (value: string | number | unknown) => {
   if (!_.isFinite(value) && (!_.isString(value) && _.isEmpty(value))) {
     throw new TypeError(
-      `DateTimeString must be either a numeric timestamp or an ISO 8601-compliant ` +
-        `Date or DateTime string.`,
+      'DateTimeString must be either a numeric timestamp or an ISO ' +
+        '8601-compliant Date or DateTime string.',
     )
   }
   if (typeof value === 'string') {
@@ -20,7 +20,7 @@ const coerceDateTimeValue = (value: string | number | unknown) => {
 const DateTimeType = new GraphQLScalarType({
   name: 'DateTime',
   // tslint:disable
-  serialize: coerceDateTimeValue,
+  serialize: (value: DateTime) => value.toISO(),
   parseValue: coerceDateTimeValue,
   parseLiteral: ast => {
     if (ast.kind === Kind.INT) {

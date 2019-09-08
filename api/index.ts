@@ -16,6 +16,7 @@ const server = new ApolloServer({
 server
   .listen()
   .then(({ url }) => {
-    log.debug(`🚀 Server ready at ${url}`)
+    log.info(`🚀 Docker Hub GraphQL API ready at ${url}`)
+    return
   })
   .catch(log.error)

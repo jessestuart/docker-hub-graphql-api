@@ -4,23 +4,32 @@ import {
   fetchManifestList,
   queryTopRepos,
 } from 'docker-hub-utils'
+import { DateTime } from 'luxon'
 import DateTimeType from './scalars/DateTime'
+import log from './utils/log'
 
 const DockerHubRepoResolver = {
   manifestList: async (
     repo: DockerHubRepo,
   ): Promise<DockerManifestList | undefined> => {
-    return await fetchManifestList(repo)
+    try {
+      return await fetchManifestList(repo)
+    } catch (err) {
+      log.error(err)
+      return
+    }
   },
 }
 
+interface QueryProps {
+  username: string
+  lastUpdatedSince?: DateTime | undefined
+}
+
 const Query = {
-  repos: async (
-    _: unknown,
-    query: { username: string; lastUpdatedSince?: string | number },
-  ): Promise<DockerHubRepo[]> => {
-    const { username } = query
-    return await queryTopRepos(username)
+  repos: async (_: unknown, query: QueryProps): Promise<DockerHubRepo[]> => {
+    const { username, lastUpdatedSince } = query
+    return queryTopRepos({ user: username, lastUpdatedSince })
   },
 }
 

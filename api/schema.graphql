@@ -1,5 +1,7 @@
+scalar DateTime
+
 type DockerHubRepo {
-  username: String!
+  user: String!
   description: String
   lastUpdated: DateTime!
   name: String!
@@ -40,7 +42,5 @@ enum Architecture {
 }
 
 type Query {
-  repos(username: String!, lastUpdatedSinceTimestamp: Int): [DockerHubRepo!]
+  repos(username: String!, lastUpdatedSince: DateTime): [DockerHubRepo!]
 }
-
-scalar DateTime
