@@ -1,8 +1,10 @@
 import { ApolloServer } from 'apollo-server'
+import { importSchema } from 'graphql-import'
 
 import resolvers from './resolvers'
-import typeDefs from './schema'
 import log from './utils/log'
+
+const typeDefs = importSchema(__dirname + '/schema.graphql')
 
 const server = new ApolloServer({
   introspection: true,
@@ -14,8 +16,7 @@ const server = new ApolloServer({
 server
   .listen()
   .then(({ url }) => {
-    return log.debug(`🚀 Server ready at ${url}`)
+    log.info(`🚀 Docker Hub GraphQL API ready at ${url}`)
+    return
   })
   .catch(log.error)
-
-export default server

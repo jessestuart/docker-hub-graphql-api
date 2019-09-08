@@ -18,6 +18,9 @@ workflows:
             branches:
               only:
                 - master
+      - update_schema:
+          requires:
+            - release
 
 # ====================
 # ALIASES
@@ -72,3 +75,10 @@ jobs:
       - checkout
       - *restore_cache
       - run: yarn semantic-release
+
+  update_schema:
+    <<: *docker_image
+    steps:
+      - checkout
+      - *restore_cache
+      - run: yarn apollo service:push
