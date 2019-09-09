@@ -25,7 +25,7 @@
     "@typescript-eslint/eslint-plugin": "canary",
     "@typescript-eslint/experimental-utils": "canary",
     "@typescript-eslint/parser": "canary",
-    "apollo": "2.18.0",
+    "apollo": "2.18.1",
     "apollo-server-testing": "2.9.3",
     "concurrently": "4.1.2",
     "eslint": "6.3.0",
