@@ -2551,10 +2551,10 @@ dlv@^1.1.0:
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
-docker-hub-utils@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.7.0.tgz#2ce9eb74c61e7d378a196092d961e969f94ab207"
-  integrity sha512-BOUfz6YxMWjbs9ZKYcVkJbc+aK/TV6Mq36ixRkhAID44j9F7RIcZs2+HCOUsIUWN0qfhHwzF5w+C1NmlEpPHVA==
+docker-hub-utils@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.7.1.tgz#2f70a878827dab8e993daa9ba99e6263b391e834"
+  integrity sha512-m0ktyBo2exqoS/P/nOLx987sLFT8ozRWj59hnQAK4tRU9nJfmgxXvTkGmRDUslFLW5udAmqpArcXDR0Ra9BCDw==
   dependencies:
     axios "0.19.0"
     camelcase-keys "6.0.1"
