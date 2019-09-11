@@ -31,14 +31,39 @@ type DockerManifest {
 }
 
 type Platform {
-  os: String!
+  os: OS!
   architecture: Architecture!
 }
 
+enum OS {
+  aix
+  android
+  darwin
+  dragonfly
+  freebsd
+  illumos
+  js
+  linux
+  netbsd
+  openbsd
+  plan9
+  solaris
+  windows
+}
+
 enum Architecture {
+  i386
   amd64
   arm
   arm64
+  mips
+  mips64
+  mips64le
+  mipsle
+  ppc64
+  ppc64le
+  s390x
+  wasm
 }
 
 type Query {
