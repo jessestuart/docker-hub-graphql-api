@@ -721,7 +721,7 @@
   dependencies:
     "@types/node" "*"
 
-"@typescript-eslint/eslint-plugin@^2.2.1-alpha.6":
+"@typescript-eslint/eslint-plugin@2.2.1-alpha.6":
   version "2.2.1-alpha.6"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.2.1-alpha.6.tgz#524e9f67c87795b73c9a4935952b2f8625888812"
   integrity sha512-iNyOM8FRyyXCa5nOixJEvu+KoxD0UKxjAx4Tc94NGgSrQJf3jdV4TuIvsOWF4779DjqI9SRRqZrTaLqW9QFDog==
@@ -741,7 +741,7 @@
     "@typescript-eslint/typescript-estree" "1.13.0"
     eslint-scope "^4.0.0"
 
-"@typescript-eslint/experimental-utils@2.2.1-alpha.6+aeea4cd", "@typescript-eslint/experimental-utils@^2.2.1-alpha.6":
+"@typescript-eslint/experimental-utils@2.2.1-alpha.6", "@typescript-eslint/experimental-utils@2.2.1-alpha.6+aeea4cd":
   version "2.2.1-alpha.6"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.2.1-alpha.6.tgz#31ca39aad0e88dcd6a040b70d7b7b4158d0cebf8"
   integrity sha512-eznjVPZc86dK27jFsWkm8MYaLQVIV4UDY7y4ForSQU3d+OQTZNLcAlCcAxZgbbEiJDCFHDGy2swag1S8fCcHxQ==
@@ -749,6 +749,16 @@
     "@types/json-schema" "^7.0.3"
     "@typescript-eslint/typescript-estree" "2.2.1-alpha.6+aeea4cd"
     eslint-scope "^5.0.0"
+
+"@typescript-eslint/parser@2.2.1-alpha.6":
+  version "2.2.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.2.1-alpha.6.tgz#085499b1bc4f6b49661b73a97de310756e67dbf9"
+  integrity sha512-brpAi+ooce73tSuEdLKKp2QB3z7wvA+DxX/xPtvG3gTIqC3eck1Z2P6H1L6JQDBWl4/3/VGUqXj02DIUrtsnlA==
+  dependencies:
+    "@types/eslint-visitor-keys" "^1.0.0"
+    "@typescript-eslint/experimental-utils" "2.2.1-alpha.6+aeea4cd"
+    "@typescript-eslint/typescript-estree" "2.2.1-alpha.6+aeea4cd"
+    eslint-visitor-keys "^1.1.0"
 
 "@typescript-eslint/parser@^1.10.2":
   version "1.13.0"
@@ -759,16 +769,6 @@
     "@typescript-eslint/experimental-utils" "1.13.0"
     "@typescript-eslint/typescript-estree" "1.13.0"
     eslint-visitor-keys "^1.0.0"
-
-"@typescript-eslint/parser@^2.2.1-alpha.6":
-  version "2.2.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.2.1-alpha.6.tgz#085499b1bc4f6b49661b73a97de310756e67dbf9"
-  integrity sha512-brpAi+ooce73tSuEdLKKp2QB3z7wvA+DxX/xPtvG3gTIqC3eck1Z2P6H1L6JQDBWl4/3/VGUqXj02DIUrtsnlA==
-  dependencies:
-    "@types/eslint-visitor-keys" "^1.0.0"
-    "@typescript-eslint/experimental-utils" "2.2.1-alpha.6+aeea4cd"
-    "@typescript-eslint/typescript-estree" "2.2.1-alpha.6+aeea4cd"
-    eslint-visitor-keys "^1.1.0"
 
 "@typescript-eslint/typescript-estree@1.13.0":
   version "1.13.0"
