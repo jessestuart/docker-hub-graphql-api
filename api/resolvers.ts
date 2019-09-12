@@ -2,7 +2,9 @@ import {
   DockerHubRepo,
   DockerManifestList,
   fetchManifestList,
+  queryTags,
   queryTopRepos,
+  Tag,
 } from 'docker-hub-utils'
 import { DateTime } from 'luxon'
 import DateTimeType from './scalars/DateTime'
@@ -19,17 +21,30 @@ const DockerHubRepoResolver = {
       return
     }
   },
+  tags: async (repo: DockerHubRepo): Promise<Tag[] | undefined> => {
+    try {
+      return await queryTags(repo)
+    } catch (err) {
+      log.error(err)
+      return
+    }
+  },
 }
 
 interface QueryProps {
   username: string
-  lastUpdatedSince?: DateTime | undefined
+  name?: string
+  lastUpdatedSince?: DateTime
 }
 
 const Query = {
-  repos: async (_: unknown, query: QueryProps): Promise<DockerHubRepo[]> => {
-    const { username, lastUpdatedSince } = query
-    return queryTopRepos({ user: username, lastUpdatedSince })
+  repos: (__: unknown, query: QueryProps): Promise<DockerHubRepo[]> => {
+    const { lastUpdatedSince, name, username } = query
+    return queryTopRepos({
+      lastUpdatedSince,
+      name,
+      user: username,
+    })
   },
 }
 

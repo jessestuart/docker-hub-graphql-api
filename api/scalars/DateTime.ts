@@ -20,7 +20,7 @@ const coerceDateTimeValue = (value: string | number | unknown) => {
 const DateTimeType = new GraphQLScalarType({
   name: 'DateTime',
   // tslint:disable
-  serialize: (value: DateTime) => value.toISO(),
+  serialize: coerceDateTimeValue,
   parseValue: coerceDateTimeValue,
   parseLiteral: ast => {
     if (ast.kind === Kind.INT) {
@@ -29,7 +29,7 @@ const DateTimeType = new GraphQLScalarType({
     if (ast.kind === Kind.STRING) {
       return coerceDateTimeValue(ast.value)
     }
-    return undefined
+    return
   },
 })
 

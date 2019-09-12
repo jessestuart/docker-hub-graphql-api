@@ -15,6 +15,7 @@ type DockerHubRepo {
   repositoryType: String!
   status: Int!
   manifestList: DockerManifestList
+  tags: [Tag!]
 }
 
 type DockerManifestList {
@@ -66,6 +67,32 @@ enum Architecture {
   wasm
 }
 
+type Tag {
+  creator: Int
+  fullSize: Int
+  id: Int
+  images: [TagElement!]
+  lastUpdated: DateTime
+  lastUpdater: Int
+  lastUpdaterUsername: String
+  name: String
+  repository: Int
+  v2: Boolean
+}
+
+type TagElement {
+  architecture: Architecture
+  digest: String
+  features: String
+  os: OS
+  size: Int
+}
+
 type Query {
-  repos(username: String!, lastUpdatedSince: DateTime): [DockerHubRepo!]
+  # Primary entrypoint for queries.
+  repos(
+    lastUpdatedSince: DateTime
+    name: String
+    username: String!
+  ): [DockerHubRepo!]
 }
