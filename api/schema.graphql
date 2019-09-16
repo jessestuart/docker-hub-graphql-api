@@ -89,6 +89,8 @@ type TagElement {
 }
 
 type Query {
+  # Query a single repo for a username.
+  repo(name: String, username: String!): DockerHubRepo
   # Primary entrypoint for queries.
   repos(
     lastUpdatedSince: DateTime

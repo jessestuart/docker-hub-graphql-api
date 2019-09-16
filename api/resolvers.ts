@@ -2,6 +2,7 @@ import {
   DockerHubRepo,
   DockerManifestList,
   fetchManifestList,
+  queryRepo,
   queryTags,
   queryTopRepos,
   Tag,
@@ -33,16 +34,21 @@ const DockerHubRepoResolver = {
 
 interface QueryProps {
   username: string
-  name?: string
   lastUpdatedSince?: DateTime
 }
 
 const Query = {
+  repo: (
+    __: unknown,
+    query: QueryProps & { name: string },
+  ): Promise<DockerHubRepo | undefined> => {
+    const { name, username } = query
+    return queryRepo({ name, user: username })
+  },
   repos: (__: unknown, query: QueryProps): Promise<DockerHubRepo[]> => {
-    const { lastUpdatedSince, name, username } = query
+    const { lastUpdatedSince, username } = query
     return queryTopRepos({
       lastUpdatedSince,
-      name,
       user: username,
     })
   },
