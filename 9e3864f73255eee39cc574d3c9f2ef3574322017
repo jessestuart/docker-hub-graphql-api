@@ -1,0 +1,6 @@
+[ver:1,total:600]
+.gtm/terminal.app:500,1568782800:390,1568952000:110,r
+release.config.ts:30,1568952000:30,d
+node_modules/apollo/lib/commands/client/codegen.js:30,1568782800:30,r
+release.config.js:20,1568952000:20,m
+.circleci/config.yml:20,1568952000:20,r
