@@ -1,7 +1,7 @@
 {
   "name": "docker-hub-graphql-api",
   "description": "A lightweight GraphQL API for querying stats from Docker Hub.",
-  "version": "0.0.1",
+  "version": "1.3.5",
   "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
     "apollo-datasource-rest": "0.6.4",
