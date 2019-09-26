@@ -20,7 +20,7 @@
     "@now/node": "1.0.0",
     "@semantic-release/git": "7.0.16",
     "@types/dotenv": "6.1.1",
-    "@types/lodash": "4.14.139",
+    "@types/lodash": "4.14.140",
     "@types/luxon": "1.15.2",
     "@types/node": "12.7.8",
     "@types/pino": "5.8.10",
