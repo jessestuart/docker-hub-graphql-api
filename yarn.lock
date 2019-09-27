@@ -2563,15 +2563,15 @@ dlv@^1.1.0:
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
-docker-hub-utils@1.10.7:
-  version "1.10.7"
-  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.7.tgz#81f42ae483b157d91772bdc4cb9a7e47e416cede"
-  integrity sha512-6gI7+zI3f4s38cKt5ZGuA8CLYqV5MBXePKSh+AE0zlLr7NH3Ee7IYoVK5fI5TE40IFIL4Y5/iPrldUqz4pGNqg==
+docker-hub-utils@1.10.8:
+  version "1.10.8"
+  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.8.tgz#fbb427ed0a72542d7f8d5b4b01a0d5ac8d11272f"
+  integrity sha512-P+HDxFIM6QU54e6WSSdEGNPGqk32UwMErV1wLmsV0gfOxjnIZGKBKJ1zqfKRFI0aGaf0Yz0GTevLFvT324G0Yg==
   dependencies:
     axios "0.19.0"
     camelcase-keys "6.0.1"
     luxon "1.19.3"
-    pino "5.13.3"
+    pino "5.13.4"
     ramda "0.26.1"
 
 doctrine@1.5.0:
@@ -3238,11 +3238,6 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-
-fast-redact@^1.4.4:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/fast-redact/-/fast-redact-1.5.0.tgz#302892f566750c4f5eec7b830bfc9bc473484034"
-  integrity sha512-Afo61CgUjkzdvOKDHn08qnZ0kwck38AOGcMlvSGzvJbIab6soAP5rdoQayecGCDsD69AiF9vJBXyq31eoEO2tQ==
 
 fast-redact@^2.0.0:
   version "2.0.0"
@@ -6440,18 +6435,6 @@ pino-std-serializers@^2.3.0:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.2.tgz#cb5e3e58c358b26f88969d7e619ae54bdfcc1ae1"
   integrity sha512-WaL504dO8eGs+vrK+j4BuQQq6GLKeCCcHaMB2ItygzVURcL1CycwNEUHTD/lHFHs/NL5qAz2UKrjYWXKSf4aMQ==
-
-pino@5.13.3:
-  version "5.13.3"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.13.3.tgz#26cd6f69b4bd03d6408af28eddcd9313687f143d"
-  integrity sha512-FL12DKlPwBlbhztlUz6kseR03PRR8nD+wvLdN/Sji9UiBYYfSjX+k8ocU7/NwW55JdFRONTn3iACoelXnMFVVQ==
-  dependencies:
-    fast-redact "^1.4.4"
-    fast-safe-stringify "^2.0.7"
-    flatstr "^1.0.9"
-    pino-std-serializers "^2.3.0"
-    quick-format-unescaped "^3.0.2"
-    sonic-boom "^0.7.5"
 
 pino@5.13.4:
   version "5.13.4"
