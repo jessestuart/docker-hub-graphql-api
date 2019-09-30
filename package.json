@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@now/build-utils": "0.10.1",
-    "@now/node": "1.0.0",
+    "@now/node": "1.0.1",
     "@semantic-release/git": "7.0.16",
     "@types/dotenv": "6.1.1",
     "@types/lodash": "4.14.141",
