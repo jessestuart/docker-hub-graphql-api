@@ -22,7 +22,7 @@
     "@types/dotenv": "6.1.1",
     "@types/lodash": "4.14.141",
     "@types/luxon": "1.15.2",
-    "@types/node": "12.7.8",
+    "@types/node": "12.7.9",
     "@types/pino": "5.8.10",
     "@typescript-eslint/eslint-plugin": "2.3.2",
     "@typescript-eslint/experimental-utils": "2.3.2",
