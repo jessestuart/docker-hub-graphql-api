@@ -13,7 +13,7 @@
     "lodash": "4.17.15",
     "luxon": "1.19.3",
     "pino": "5.13.4",
-    "typescript": "3.6.3"
+    "typescript": "3.6.4"
   },
   "devDependencies": {
     "@now/build-utils": "0.10.1",
