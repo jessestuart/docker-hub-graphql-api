@@ -2521,15 +2521,15 @@ dlv@^1.1.0:
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
-docker-hub-utils@1.10.8:
-  version "1.10.8"
-  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.8.tgz#fbb427ed0a72542d7f8d5b4b01a0d5ac8d11272f"
-  integrity sha512-P+HDxFIM6QU54e6WSSdEGNPGqk32UwMErV1wLmsV0gfOxjnIZGKBKJ1zqfKRFI0aGaf0Yz0GTevLFvT324G0Yg==
+docker-hub-utils@1.10.9:
+  version "1.10.9"
+  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.9.tgz#9329f8b1aa6b291ab1ae42054b22333d5c45335c"
+  integrity sha512-2P8zdY94Owk+YKOJ9KW1BYxdkDhtdULwcVHLnaPUuUM7GCjkX7xtpQudvFGiKdu9JwpyFvM+zkch6VXjo0AOcA==
   dependencies:
     axios "0.19.0"
     camelcase-keys "6.0.1"
     luxon "1.19.3"
-    pino "5.13.4"
+    pino "5.13.5"
     ramda "0.26.1"
 
 doctrine@1.5.0:
@@ -6238,18 +6238,6 @@ pino-std-serializers@^2.3.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.2.tgz#cb5e3e58c358b26f88969d7e619ae54bdfcc1ae1"
   integrity sha512-WaL504dO8eGs+vrK+j4BuQQq6GLKeCCcHaMB2ItygzVURcL1CycwNEUHTD/lHFHs/NL5qAz2UKrjYWXKSf4aMQ==
 
-pino@5.13.4:
-  version "5.13.4"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.13.4.tgz#52935caaab8d47048deffa315336e8da30d8b96d"
-  integrity sha512-heeg8m8FZY8Nl3nuuD+msJUmhamqoGl7JXoTExh9YpGajzz6LYbVByUqrjbf4sCEMYFsqdcqnTJWiSY660DraQ==
-  dependencies:
-    fast-redact "^2.0.0"
-    fast-safe-stringify "^2.0.7"
-    flatstr "^1.0.9"
-    pino-std-serializers "^2.3.0"
-    quick-format-unescaped "^3.0.2"
-    sonic-boom "^0.7.5"
-
 pino@5.13.5:
   version "5.13.5"
   resolved "https://registry.yarnpkg.com/pino/-/pino-5.13.5.tgz#3bfd03c9e7d247adf806960a25c139572ce3cd4f"
@@ -6495,11 +6483,6 @@ query-string@^6.8.2:
     decode-uri-component "^0.2.0"
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
-
-quick-format-unescaped@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/quick-format-unescaped/-/quick-format-unescaped-3.0.2.tgz#0137e94d8fb37ffeb70040535111c378e75396fb"
-  integrity sha512-FXTaCkwvpIlkdKeGDNgcq07SXWS383noQUuZjvdE1QcTt+eLuqof6/BDiEPqB59FWLie/l91+HtlJSw7iCViSA==
 
 quick-format-unescaped@^3.0.3:
   version "3.0.3"
