@@ -12,7 +12,7 @@
     "graphql-import": "0.7.1",
     "lodash": "4.17.15",
     "luxon": "1.19.3",
-    "pino": "5.13.4",
+    "pino": "5.13.5",
     "typescript": "3.6.4"
   },
   "devDependencies": {
