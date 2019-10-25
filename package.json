@@ -30,7 +30,7 @@
     "apollo": "2.21.0",
     "apollo-server-testing": "2.9.7",
     "concurrently": "4.1.2",
-    "eslint": "6.5.1",
+    "eslint": "6.6.0",
     "eslint-config-prettier": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-node": "10.0.0",
