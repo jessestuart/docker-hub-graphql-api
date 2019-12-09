@@ -27,21 +27,21 @@ workflows:
 # ====================
 docker_image: &docker_image
   docker:
-    - image: node:12
+    - image: node:13
   working_directory: ~/docker-hub-graphql-api/
 
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - dependencies-v1-{{ checksum "yarn.lock" }}
-      - dependencies-v1
+      - dependencies-v2-{{ checksum "yarn.lock" }}
+      - dependencies-v2
 
 save_cache: &save_cache
   save_cache:
     paths:
       - node_modules/
       - ~/.cache/yarn/
-    key: dependencies-v1-{{ checksum "yarn.lock" }}
+    key: dependencies-v2-{{ checksum "yarn.lock" }}
 
 install_dependencies: &install_dependencies
   run:
