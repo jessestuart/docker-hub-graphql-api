@@ -28,7 +28,7 @@
     "@typescript-eslint/parser": "2.11.0",
     "apollo": "2.21.0",
     "apollo-server-testing": "2.9.7",
-    "concurrently": "4.1.2",
+    "concurrently": "5.0.1",
     "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
     "eslint-plugin-import": "2.18.2",
