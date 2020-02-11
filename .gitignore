@@ -6,3 +6,5 @@ junit.xml
 dist/
 .gtm/
 test/coverage/
+
+.now
