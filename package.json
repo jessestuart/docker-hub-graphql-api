@@ -7,7 +7,7 @@
     "apollo-datasource-rest": "0.7.0",
     "apollo-server": "2.10.0",
     "camelcase-keys": "6.1.2",
-    "docker-hub-utils": "file:.yalc/docker-hub-utils",
+    "docker-hub-utils": "1.10.25",
     "graphql": "14.6.0",
     "graphql-import": "0.7.1",
     "lodash": "4.17.15",

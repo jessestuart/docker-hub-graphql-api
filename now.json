@@ -1,5 +1,4 @@
 {
-  "name": "docker-hub-graphql-api",
   "version": 2,
   "routes": [
     {
