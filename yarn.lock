@@ -1771,15 +1771,6 @@ camel-case@^3.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.1"
 
-camelcase-keys@6.1.2:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/camelcase-keys/-/camelcase-keys-6.1.2.tgz#531a289aeea93249b63ec1249db9265f305041f7"
-  integrity sha512-QfFrU0CIw2oltVvpndW32kuJ/9YOJwUnmWrjlXt1nnJZHCaS9i6bfOpg9R4Lw8aZjStkJWM+jc0cdXjWBgVJSw==
-  dependencies:
-    camelcase "^5.3.1"
-    map-obj "^4.0.0"
-    quick-lru "^4.0.1"
-
 camelcase-keys@6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/camelcase-keys/-/camelcase-keys-6.2.1.tgz#cd3e2d2d7db767aa3f247e4c2df93b4661008945"
@@ -2603,13 +2594,13 @@ dlv@^1.1.0:
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
-docker-hub-utils@1.10.27:
-  version "1.10.27"
-  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.27.tgz#734983822c496cd62a52c0585f72bc0a9b4e0241"
-  integrity sha512-nAwLjXSuR0VpaSeyduaB4bNfko4PRK9QZjPrXQioYjMHxL/311vheDMqjoimQr3H11PJWLtOta3j3cubhn+5kA==
+docker-hub-utils@1.10.28:
+  version "1.10.28"
+  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.28.tgz#aedd2bbe41bc3b61eac7a8be6a94c4e49dbca37e"
+  integrity sha512-Ac3NtLHCvYkq4wITda/+T/iqatuMJRgzNBE9YVDSAxoCM0apJHzWTMMQgT/RUBm4j0uCCWFGhDzZMsc7hf9TOg==
   dependencies:
     axios "0.19.2"
-    camelcase-keys "6.1.2"
+    camelcase-keys "6.2.1"
     luxon "1.22.0"
     pino "5.17.0"
     ramda "0.27.0"
