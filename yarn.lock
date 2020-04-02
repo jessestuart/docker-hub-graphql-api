@@ -2592,14 +2592,14 @@ dlv@^1.1.0:
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
-docker-hub-utils@1.10.29:
-  version "1.10.29"
-  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.29.tgz#8e1f910e704c9a7706dba8fb2b3078d7fbbe7a6e"
-  integrity sha512-wZ3BmcG3mq90rlXGfGcgqwgyTyO0kWQA5D+3J7T+nLgE1mzjggK1ZDB44krt5dj5lK/nXla3vGIw7nF7IE2kQQ==
+docker-hub-utils@1.10.30:
+  version "1.10.30"
+  resolved "https://registry.yarnpkg.com/docker-hub-utils/-/docker-hub-utils-1.10.30.tgz#cd682e514f01b4f5a232027ff5b80c88b9771230"
+  integrity sha512-1Iwk3Yzgvuxs7d1Dra1EvLlm/13VecXS5mX4Hc0TFDzqYekX4S/7dKlRhqoSBqNNkF9psiCSA+FfrbxQgtK/jA==
   dependencies:
     axios "0.19.2"
     camelcase-keys "6.2.1"
-    luxon "1.22.2"
+    luxon "1.23.0"
     pino "5.17.0"
     ramda "0.27.0"
 
@@ -4941,11 +4941,6 @@ lru-cache@^5.0.0, lru-cache@^5.1.1:
   integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   dependencies:
     yallist "^3.0.2"
-
-luxon@1.22.2:
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.22.2.tgz#799d65cc1ed0ba85b4cb3f7dd38fc08a8d1a6750"
-  integrity sha512-vq6eSaOOw1fKob+JXwfu0e3/UFUT4G4HTFRJab7dch8J1OdOGW/vXqCiJsY7rm2In+5gKNYx0EtnYT0Tc5V4Qw==
 
 luxon@1.23.0:
   version "1.23.0"
