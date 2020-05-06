@@ -708,10 +708,10 @@
   resolved "https://registry.yarnpkg.com/@types/long/-/long-4.0.1.tgz#459c65fa1867dafe6a8f322c4c51695663cc55e9"
   integrity sha512-5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==
 
-"@types/luxon@1.22.0":
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-1.22.0.tgz#dbdf2cc7ba3dfce98c57a3f0e003791122cba009"
-  integrity sha512-riAvdx85rU7OXCrjW3f7dIf7fuJDrxck2Dkjd0weh6ul7q+wumrwe6+/tD8v7yOKnZAuEnTFF4FU7b+5W/I3bw==
+"@types/luxon@1.22.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-1.22.1.tgz#e75b8e32ee33d007a5727204d4d1356a7d3f9192"
+  integrity sha512-HJoKzOoUBmZh/w2/465LVXbsqU0wE9l3Jd9VRH9wVNCVsFayJOVeo5qqLF6A8s6z+yklMWmUVLB/9FFfSv2Giw==
 
 "@types/mime@*":
   version "2.0.1"
