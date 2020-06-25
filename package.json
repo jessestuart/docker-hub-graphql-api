@@ -36,7 +36,7 @@
     "eslint-plugin-promise": "4.2.1",
     "prettier": "1.19.1",
     "prettier-eslint": "9.0.2",
-    "semantic-release": "17.1.0"
+    "semantic-release": "17.1.1"
   },
   "keywords": [
     "apollo-server",
