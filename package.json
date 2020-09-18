@@ -20,7 +20,7 @@
     "@now/node": "1.8.2",
     "@semantic-release/git": "9.0.0",
     "@types/lodash": "4.14.161",
-    "@types/luxon": "1.24.4",
+    "@types/luxon": "1.25.0",
     "@types/node": "13.13.21",
     "@types/pino": "5.20.0",
     "@typescript-eslint/eslint-plugin": "2.34.0",
