@@ -9,7 +9,7 @@
     "camelcase-keys": "6.2.2",
     "docker-hub-utils": "1.10.43",
     "graphql": "14.7.0",
-    "graphql-import": "0.7.1",
+    "graphql-import": "1.0.2",
     "lodash": "4.17.21",
     "luxon": "1.28.0",
     "pino": "5.17.0",
