@@ -27,7 +27,7 @@ workflows:
 # ====================
 docker_image: &docker_image
   docker:
-    - image: node:13
+    - image: node:16
   working_directory: ~/docker-hub-graphql-api/
 
 restore_cache: &restore_cache
