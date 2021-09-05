@@ -6,7 +6,7 @@
   "dependencies": {
     "apollo-datasource-rest": "0.9.3",
     "apollo-server": "2.16.0",
-    "camelcase-keys": "6.2.2",
+    "camelcase-keys": "7.0.0",
     "docker-hub-utils": "1.10.43",
     "graphql": "14.7.0",
     "graphql-import": "0.7.1",
