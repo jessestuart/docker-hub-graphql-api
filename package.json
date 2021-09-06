@@ -8,7 +8,7 @@
     "apollo-server": "2.16.0",
     "camelcase-keys": "6.2.2",
     "docker-hub-utils": "1.10.43",
-    "graphql": "14.7.0",
+    "graphql": "15.5.3",
     "graphql-import": "0.7.1",
     "lodash": "4.17.21",
     "luxon": "1.28.0",
@@ -52,7 +52,7 @@
     "url": "git+https://github.com/jessestuart/docker-hub-graphql-api"
   },
   "resolutions": {
-    "graphql": "14.7.0"
+    "graphql": "15.5.3"
   },
   "scripts": {
     "check-types": "tsc -p tsconfig.json",
