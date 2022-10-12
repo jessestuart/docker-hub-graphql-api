@@ -5,7 +5,7 @@
   "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
     "apollo-datasource-rest": "0.9.3",
-    "apollo-server": "2.16.0",
+    "apollo-server": "2.25.4",
     "camelcase-keys": "6.2.2",
     "docker-hub-utils": "1.10.43",
     "graphql": "14.7.0",
